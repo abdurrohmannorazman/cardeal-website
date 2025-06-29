@@ -1,0 +1,353 @@
+header {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+header h1:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.calculator-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 70px;
+  margin-top: 12rem;
+}
+
+.input-section {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(92, 45, 145, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.input-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+}
+
+.result-section {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(92, 45, 145, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+}
+
+.section-title {
+  color: #5c2d91;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0d0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title i {
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+label i {
+  color: #7e4bb9;
+  font-size: 0.9rem;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e0d0f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  background-color: #faf9ff;
+}
+
+select:focus,
+input:focus {
+  border-color: #9a6bc9;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(156, 107, 201, 0.2);
+}
+
+.input-with-unit {
+  position: relative;
+}
+
+.unit {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.calculate-btn,
+.reset-btn {
+  flex: 1;
+  padding: 16px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.calculate-btn {
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+  color: white;
+}
+
+.calculate-btn:hover {
+  background: linear-gradient(to right, #6a3fa0, #4a2174);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(92, 45, 145, 0.3);
+}
+
+.reset-btn {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.reset-btn:hover {
+  background: linear-gradient(to right, #e0e0e0, #d1d1d1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-card {
+  background: linear-gradient(135deg, #f9f5ff 0%, #f0e8ff 100%);
+  border-radius: 12px;
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #e0d0f0;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #d9c5f0;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.result-value {
+  color: #5c2d91;
+  font-weight: 600;
+  text-align: right;
+}
+
+.monthly-payment {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #5c2d91;
+  margin: 30px 0 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+  color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+.highlight .result-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.highlight .result-value {
+  color: white;
+}
+
+.note {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  padding: 0 20px;
+}
+
+.models-table {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(92, 45, 145, 0.15);
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.models-table:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #7e4bb9, #5c2d91);
+}
+
+.models-table h2 {
+  color: #5c2d91;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0d0f0;
+}
+
+th {
+  background-color: #f0e8ff;
+  color: #5c2d91;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9f5ff;
+}
+
+@media (max-width: 768px) {
+  .calculator-container {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .monthly-payment {
+    font-size: 2rem;
+  }
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #7e4bb9 0%, #5c2d91 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  box-shadow: 0 10px 20px rgba(92, 45, 145, 0.3);
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
